@@ -1,0 +1,131 @@
+@use "../util" as *;
+
+.wrapper {
+  .content {
+    max-width: rem(725);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+
+    @include breakpoint(medium) {
+      padding: rem(24);
+      border-radius: rem(20);
+    }
+
+    &__recipie {
+      &-introduction {
+        &--image {
+          max-width: rem(655);
+          max-height: rem(300);
+
+          @include breakpoint(medium) {
+            margin: 0 auto;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+
+            @include breakpoint(medium) {
+              border-radius: rem(12);
+            }
+          }
+        }
+        &--text {
+          padding: rem(24) rem(30) 0 rem(30);
+          text-align: start;
+
+          @include breakpoint(large) {
+            padding: rem(24) rem(20);
+          }
+
+          h1 {
+            font-size: rem(30);
+            color: var(--darkCharcoal);
+          }
+
+          p {
+          }
+        }
+        &--preperationTime {
+          margin: 0 rem(24) rem(24) rem(24);
+          background-color: var(--roseWhite);
+          padding: rem(24);
+          text-align: start;
+          border-radius: rem(12);
+          p {
+            color: var(--darkRaspberry);
+            font-size: rem(18);
+            font-weight: 700;
+            margin: 0;
+          }
+        }
+      }
+
+      &-ingredients {
+        margin-inline: rem(24);
+        padding: rem(24) 0;
+        border-bottom: 1px solid var(--lightGrey);
+      }
+
+      &-instructions {
+        margin: rem(24);
+        border-bottom: 1px solid var(--lightGrey);
+      }
+
+      &-nutritions {
+        margin: 0 rem(35) rem(24) rem(35);
+
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+          margin-inline: rem(24);
+        }
+
+        table {
+          width: 100%;
+          font-family: var(--font-Outfit);
+          tr {
+            text-align: left;
+
+            td {
+              padding: rem(8) rem(25);
+              font-size: rem(16);
+              font-weight: 400;
+              color: var(--grey);
+              border-bottom: 1px solid var(--lightGrey);
+            }
+          }
+          :nth-child(2) {
+            color: var(--darkRaspberry);
+            font-weight: 700;
+            padding: rem(8) rem(25);
+          }
+
+          :nth-child(4) {
+            td {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: rem(10);
+    .attribution {
+      font-size: 12px;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        font-size: 16px;
+      }
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}

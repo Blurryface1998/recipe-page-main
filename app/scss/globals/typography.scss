@@ -1,0 +1,61 @@
+@use "../util" as *;
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.1;
+  font-family: var(--font-YoungSerif);
+  color: var(--nutmeg);
+  font-size: rem(24);
+}
+
+ul {
+  margin: rem(14) 0 0 0;
+  padding: 0 rem(14);
+  list-style: square;
+}
+
+li {
+  text-align: start;
+  color: var(--grey);
+  font-size: rem(16);
+  padding: rem(8) rem(12);
+}
+
+li::marker {
+  color: var(--darkRaspberry);
+  font-size: rem(12);
+}
+
+ol {
+  padding: 0 rem(14);
+  li::marker {
+    font-weight: 700;
+    font-size: rem(16);
+  }
+}
+
+span {
+  font-weight: 700;
+  color: var(--wengeBrown);
+}
+
+p {
+  font-size: rem(16);
+  font-weight: 400;
+  color: var(--grey);
+  line-height: 1.5;
+}
+
+.numbers {
+  color: var(--darkRaspberry);
+  font-weight: 700;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

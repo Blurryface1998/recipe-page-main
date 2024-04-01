@@ -1,0 +1,32 @@
+@use "../util" as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  max-width: 1440px;
+  max-height: 1955px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-Outfit);
+  background-color: var(--egshell);
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    margin-top: rem(45);
+  }
+}
